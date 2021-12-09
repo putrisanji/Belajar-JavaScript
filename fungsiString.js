@@ -143,4 +143,15 @@ konvFunc('ini kucing ')
     Match('ini gue kucing gembul kucing', 'kucing')
     Match('ini gue kucing gembul kucing', /kucing/)//regular expression
 
-//
+// fungsi string replace digunakan untuk mengganti string 
+
+
+    function Replace(sentences,paramsA, paramsB) {
+        console.log(sentences.replace(paramsA,paramsB))//paramsA adalah kata yang ingin diganti paramsB adalah kata pengganti
+                                                    
+    }
+    Replace('ini gue kucing gembul kucing', 'kucing', 'anjing')//fungsi ini hanya mengganti string satu kali saja
+
+
+
+
