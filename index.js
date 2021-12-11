@@ -28,5 +28,34 @@
  console.log(d)
     // perbedaan 
     let e; //e dapat terdefinisi namum valuenya tidak ada atau undifind
-     g; //tidak terdefinisi, harus disertakan valuenya
+    //  g; //tidak terdefinisi, harus disertakan valuenya
 
+// Konversi Menjadi Numbur 
+
+function KonvNumber(paramsA, paramsB) {
+    console.log(paramsA+paramsB)
+    console.log(Number(paramsA)+Number(paramsB))
+    
+}
+
+KonvNumber(3, '4')
+KonvNumber(3, 4)
+KonvNumber('3', "4")
+
+//Parse Int ini akan mengkonversi tipe data menjadi int
+
+function parseIntFunc(params) {
+    return parseInt(params)
+    
+}
+
+console.log(parseIntFunc('9 anak kucing'))
+
+//Parse float 
+
+function parseFloatFunc(params) {
+    return parseFloat(params)
+    
+}
+
+console.log(parseFloatFunc('5.798'))

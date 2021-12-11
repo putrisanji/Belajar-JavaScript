@@ -152,6 +152,15 @@ konvFunc('ini kucing ')
     }
     Replace('ini gue kucing gembul kucing', 'kucing', 'anjing')//fungsi ini hanya mengganti string satu kali saja
 
+//fungsi konversi menjadi string 
+
+function konvStringFunc(params) {
+    return String(params)
+    
+}
+console.log(konvStringFunc(true))
+console.log(konvStringFunc(124))
+console.log(konvStringFunc('coba'))
 
 
 

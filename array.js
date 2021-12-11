@@ -186,3 +186,102 @@ console.log(Identitas.every(params=>params.gender==='male')) // mereturn false k
 
 console.log(Identitas.some(params=>params.gender==='male'))//return true
 
+// fungsi Array Finf and Find Index
+// find digunakan untuk mengembalikan sebuah nilai dari item pertama dalam sebuah array yang memenuhi fungsi pengujian yang dilakukan
+
+
+const angka=[11,3,5,12,4,6]
+
+const found= angka.find((item)=>{
+    return item>10;
+
+})
+console.log(found)// output 11 karena 11 berada pada index awal dan telah memenuhi kondisi yang  diharapkan yaitu >10
+
+function isLargeNumber(params) {
+    return params>11;
+    
+}
+
+console.log(angka.findIndex(isLargeNumber))
+
+//Fungsi Array Reduce dan Reduce Right
+//Reduce digunakan untuk megakumulasikan atau mengurangi nilai di dalama array
+// Reduce Right menerapkan fungsi terhadap akumulator dan setiap niali array dari kanan kekiri untuk meguranginya menjadi niali tunggal
+const reducer= (accumulator,currentValue)=> accumulator+currentValue;
+
+console.log(angka.reduce(reducer))
+console.log(angka.reduce(reducer,5))
+
+//jika bukan nested array maka fungsi ini sama dengan reduce biasa
+const reduceR= angka.reduceRight((accumulator,currentValue)=>{
+    return accumulator+currentValue
+})
+console.log(reduceR)
+
+//nested array
+
+const koordinat= [[0,1],[5,6],[4,8],[0,9]]
+const reduceR2= koordinat.reduceRight((accumulator,currentValue)=>{
+    return accumulator+currentValue
+})
+console.log(reduceR2)//hasulnya merupakan gabungan dari element kanan dengan element kiri pada sub array yang berbeda
+
+const reduceR3= koordinat.reduceRight((accumulator,currentValue)=>{
+    return accumulator.concat(currentValue)
+})
+console.log(reduceR3) //menghasilkan satu array
+
+//Array Sort diguankan untuk mengurutakn element didalam array sesuai Abjad
+//jika elementnya bukan huruf makan akan diubah semntara menjadi string lalu diurutkan
+//sementara jika terdapat element null maka akan diletakkan di akhir
+
+function pengurutan(params) {
+    console.log(params)
+    let result= params.sort()
+    return result
+    
+}
+
+console.log(pengurutan(data))
+
+//untuk megurutkan secara descending dapat menggunakan method reverse
+
+
+//fungsi array Eval fungsi ini digunakan untuk megefaluasi ekspresi dan dapat juga digunakan untuk mengeksekusi peryataan
+
+function Evalfunc(params) {
+    var total= 0
+    for(let i=0;i<params.length;i++){
+        total+=params[i]
+    }
+    console.log(eval(total))
+    
+}
+Evalfunc(angka)
+
+//fungsi isFinite 
+const campuran=[1,2,3,'depok','bekasi']
+
+function isFintefunc(paramsA, paramsB, paramsC, paramsD) {
+    let a=isFinite(paramsA)
+    let b=isFinite(paramsB)
+    let c=isFinite(paramsC)
+    let d=isFinite(paramsD)
+    
+    console.log(a) //data terbatas dalam array
+    console.log(b) //data terbatas dalam array
+    console.log(c) //data terbatas dalam array
+    console.log(d) //data tidak terbatas
+    
+}
+isFintefunc(angka, data, campuran, -559994.65)
+
+// fungsi isNan akan mereturn true jika ada data not a number
+
+function isNanFuc(params) {
+    return isNaN(params)
+    
+}
+console.log(isNanFuc(angka))// hasilnya true karena tipe datanya array bukan number
+console.log(isNanFuc(223)) //hasilnya false karena tipe datanya number
